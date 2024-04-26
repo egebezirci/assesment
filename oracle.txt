@@ -1,0 +1,9 @@
+SELECT 
+    order_id,
+    LISTAGG(id, ', ') WITHIN GROUP (ORDER BY id) AS id_list
+FROM 
+    oracle_test_table
+GROUP BY 
+    order_id;
+
+#Açık konusmak gerekirse bunun nasıl yapılacağı konusunda googledan biraz yardım aldım LISTAGG fonksiyonunu bilmiyordum. Burada LISTAGG fonksiyonunu kullanarak her bir order_id için karşılık gelen id değerlerini virgülle ayırıp bir liste haline getirmiş olduk. Son bölümdeki group by ise order_id ye göre sıralama yapmaya yarar.  

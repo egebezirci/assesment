@@ -1,0 +1,4 @@
+*/10 * * * * /path/to/hello_world_start_stop.sh >/dev/null 2>&1
+
+#10 dakikada bir çalışacak şekilde ayarlanmıştır.
+

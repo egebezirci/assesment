@@ -1,0 +1,10 @@
+db.collection_mongo.find({
+    gsm: { $exists: true, $ne: null },
+    insert_date: { $gt: ISODate("2022-04-01T00:00:00.000Z") }
+})
+
+
+#Burada collection mongo ismini verdiğim bir collection bulunmaktadır. Find ile filtreleme ve arama yapılmaktadır. gsm alanının dolu olduğu ve boş olmadığı senaryo incelenir. Insert date alanında ise belrtilen tarih yani 1 Nisan tarihinden büyük olan tarihler seçilir ve sorgu tamamlanır.
+
+
+ 
